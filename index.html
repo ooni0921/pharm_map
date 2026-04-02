@@ -2,37 +2,34 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>약국 인력 현황 지도</title>
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2223a20b252e059e82135b69bb10f001"></script>
+    <title>약국 현황 분석 지도</title>
+    <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=여기에_자바스크립트_키_입력&autoload=false"></script>
     <style>
-        body { margin: 0; padding: 0; font-family: 'Malgun Gothic', sans-serif; }
+        body { margin: 0; font-family: 'Pretendard', sans-serif; }
         #map { width: 100%; height: 100vh; }
-        .control-box {
-            position: absolute; top: 15px; left: 15px; z-index: 100;
-            background: rgba(255, 255, 255, 0.95); padding: 20px;
-            border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        .ui-panel {
+            position: absolute; top: 20px; left: 20px; z-index: 10;
+            background: white; padding: 20px; border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1); width: 250px;
         }
-        h3 { margin-top: 0; font-size: 16px; color: #333; }
-        .filter-input { display: flex; align-items: center; gap: 10px; }
-        input[type="number"] { width: 60px; padding: 8px; border: 1px solid #ddd; border-radius: 4px; }
+        input[type="number"] { width: 60px; padding: 8px; border: 1px solid #ddd; border-radius: 6px; }
         button { 
-            padding: 8px 15px; background: #007bff; color: white; border: none; 
-            border-radius: 4px; cursor: pointer; transition: 0.2s;
+            padding: 8px 15px; background: #222; color: white; border: none; 
+            border-radius: 6px; cursor: pointer; font-weight: bold;
         }
-        button:hover { background: #0056b3; }
-        .stats { margin-top: 10px; font-size: 13px; color: #666; }
+        .info-window { padding: 15px; font-size: 13px; line-height: 1.5; }
     </style>
 </head>
 <body>
 
-<div class="control-box">
-    <h3>약국 현황 필터</h3>
-    <div class="filter-input">
+<div class="ui-panel">
+    <h2 style="margin:0 0 15px 0; font-size: 18px;">약국 인력 필터</h2>
+    <div style="display: flex; align-items: center; gap: 10px;">
         <span>최소 약사 수:</span>
-        <input type="number" id="minInput" value="1" min="0">
+        <input type="number" id="minCnt" value="1" min="0">
         <button onclick="applyFilter()">적용</button>
     </div>
-    <div id="stats" class="stats">데이터 로딩 중...</div>
+    <p id="status" style="font-size: 12px; color: #666; margin-top: 15px;"></p>
 </div>
 
 <div id="map"></div>
@@ -42,69 +39,57 @@
     let allData = [];
     let markers = [];
 
-    // 1. 지도 초기화
-    const mapContainer = document.getElementById('map');
-    const mapOption = { 
-        center: new kakao.maps.LatLng(37.5665, 126.9780), // 초기 중심점 (서울시청)
-        level: 8 
-    };
-    map = new kakao.maps.Map(mapContainer, mapOption);
+    // 2. 카카오맵 라이브러리 로드 후 실행
+    kakao.maps.load(function() {
+        const container = document.getElementById('map');
+        const options = {
+            center: new kakao.maps.LatLng(37.541, 127.056), // 성수동 기준
+            level: 7
+        };
+        map = new kakao.maps.Map(container, options);
 
-    // 2. data.json 파일 읽어오기
-    fetch('data.json')
-        .then(response => response.json())
-        .then(data => {
-            allData = data;
-            applyFilter(); // 초기 데이터 표시
-        })
-        .catch(error => {
-            document.getElementById('stats').innerText = "데이터 로딩 실패";
-            console.error('Error loading JSON:', error);
-        });
+        // 3. 데이터 로드
+        fetch('data.json')
+            .then(res => res.json())
+            .then(data => {
+                allData = data;
+                applyFilter();
+            })
+            .catch(err => console.error("JSON 로드 실패:", err));
+    });
 
     function applyFilter() {
-        const minVal = parseInt(document.getElementById('minInput').value) || 0;
+        const min = parseInt(document.getElementById('minCnt').value) || 0;
         
         // 기존 마커 제거
         markers.forEach(m => m.setMap(null));
         markers = [];
 
-        // 조건에 맞는 데이터 필터링
-        const filtered = allData.filter(item => item.pharmacists >= minVal);
-        document.getElementById('stats').innerText = `표시된 약국: ${filtered.length} 개`;
+        const filtered = allData.filter(d => d.cnt >= min);
+        document.getElementById('status').innerText = `총 ${filtered.length}개의 약국 표시 중`;
 
-        // 3. 필터링된 데이터로 마커 찍기
         filtered.forEach(item => {
-            const markerPos = new kakao.maps.LatLng(item.y, item.x);
             const marker = new kakao.maps.Marker({
-                position: markerPos,
+                position: new kakao.maps.LatLng(item.y, item.x),
                 map: map
             });
 
-            // 클릭 시 나타날 정보창
-            const content = `
-                <div style="padding:15px; width:200px;">
-                    <div style="font-weight:bold; font-size:14px; margin-bottom:5px;">${item.name}</div>
-                    <div style="font-size:12px; color:#555;">약사: ${item.pharmacists}명</div>
-                    <div style="font-size:11px; color:#888; margin-top:5px;">${item.address}</div>
-                </div>`;
-            
             const infowindow = new kakao.maps.InfoWindow({
-                content: content,
+                content: `
+                    <div class="info-window">
+                        <strong>${item.name}</strong><br>
+                        약사 수: ${item.cnt}명<br>
+                        <small style="color:#888">${item.addr}</small>
+                    </div>`,
                 removable: true
             });
 
-            kakao.maps.event.addListener(marker, 'click', function() {
+            kakao.maps.event.addListener(marker, 'click', () => {
                 infowindow.open(map, marker);
             });
 
             markers.push(marker);
         });
-
-        // 데이터가 있다면 첫 번째 마커로 지도 중심 이동 (선택사항)
-        if (filtered.length > 0) {
-            map.setCenter(new kakao.maps.LatLng(filtered[0].y, filtered[0].x));
-        }
     }
 </script>
 </body>
