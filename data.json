@@ -39576,14 +39576,6 @@
         "pharmacists": 1
     },
     {
-        "ykiho": "JDQ4MTg4MSM1MSMkMSMkNCMkMDMkNDgxNzAyIzMxIyQxIyQ3IyQ3OSQyNjEyMjIjNDEjJDEjJDQjJDgz",
-        "name": "도담약국",
-        "address": "서울특별시 노원구 공릉로43길 1, 104호 (공릉동)",
-        "x": NaN,
-        "y": NaN,
-        "pharmacists": 0
-    },
-    {
         "ykiho": "JDU4MTI3MSM1MSMkMSMkMCMkMDMkNDgxOTYxIzExIyQxIyQ3IyQ5OSQ0NjEwMDIjNTEjJDEjJDYjJDgz",
         "name": "도담온누리약국",
         "address": "경기도 평택시 고덕국제대로 94, 우성고덕타워2 106호 (고덕동)",
@@ -56383,3 +56375,1044 @@
         "y": 37.4729321,
         "pharmacists": 1
     },
+    {
+        "ykiho": "JDQ4MTYyMiM1MSMkMSMkMCMkMDMkNTgxMzUxIzIxIyQxIyQxIyQwMyQ0NjEwMDIjNzEjJDEjJDgjJDgz",
+        "name": "명숙포약국",
+        "address": "경기도 군포시 고산로 702, (산본동)",
+        "x": 126.9361135,
+        "y": 37.3720785,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM4MSMkMSMkMCMkMDMkMzgxMTkxIzExIyQyIyQzIyQwMCQ0NjE0ODEjODEjJDEjJDYjJDgz",
+        "name": "명승약국",
+        "address": "대구광역시 달서구 달구벌대로 1714, (두류동)",
+        "x": 128.5531196,
+        "y": 35.8558836,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM2MSMkMSMkMiMkMDMkMzgxNzAyIzQxIyQxIyQ3IyQ4MiQyNjE4MzIjODEjJDEjJDYjJDgz",
+        "name": "명신 한약국",
+        "address": "대전광역시 중구 사득로 6, (부사동)",
+        "x": 127.4344062,
+        "y": 36.3127236,
+        "pharmacists": 0
+    },
+    {
+        "ykiho": "JDQ4MTg4MSM1MSMkMSMkMCMkMDMkMzgxNzAyIzUxIyQxIyQxIyQ2MiQzNjEyMjIjODEjJDEjJDYjJDgz",
+        "name": "명신당약국",
+        "address": "서울특별시 서대문구 증가로 84, 1층 103호 (연희동)",
+        "x": 126.9271289,
+        "y": 37.5749873,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM1MSMkMSMkMCMkMDMkMzgxMzUxIzMxIyQxIyQzIyQ4MiQzNjE0ODEjNzEjJDEjJDgjJDgz",
+        "name": "명신약국",
+        "address": "인천광역시 미추홀구 학익소로61번길 135, (학익동)",
+        "x": 126.6774419,
+        "y": 37.4433455,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTAxMiM1MSMkMSMkMCMkMDMkMzgxMTkxIzIxIyQxIyQxIyQ3OSQ0NjE0ODEjNjEjJDEjJDQjJDgz",
+        "name": "명신약국",
+        "address": "부산광역시 영도구 절영로 561, (동삼동)",
+        "x": 129.0719982,
+        "y": 35.0757825,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDU4MTI3MSM1MSMkMSMkMCMkMDMkMzgxMzUxIzUxIyQxIyQxIyQxMyQyNjEyMjIjNjEjJDEjJDAjJDgz",
+        "name": "명신약국",
+        "address": "경기도 광명시 도덕로 40, 3층 301호 (광명동)",
+        "x": 126.8522487,
+        "y": 37.4684335,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM4MSMkMSMkMCMkMDMkMzgxOTYxIzExIyQxIyQ3IyQxMyQyNjEyMjIjNjEjJDEjJDAjJDgz",
+        "name": "명신온누리약국",
+        "address": "경상북도 영덕군 강구면 영덕대게로 34, 34",
+        "x": 129.3825551,
+        "y": 36.3602027,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTg4MSM1MSMkMSMkNCMkMDMkMzgxMzUxIzIxIyQxIyQ5IyQwMyQyNjE4MzIjNjEjJDEjJDQjJDgz",
+        "name": "명심약국",
+        "address": "서울특별시 강남구 개포로 207, (개포동)",
+        "x": 127.0453158,
+        "y": 37.4785782,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM4MSMkMSMkMCMkMDMkMzgxNzAyIzUxIyQxIyQxIyQxMyQyNjEwMDIjNDEjJDEjJDgjJDgz",
+        "name": "명약국",
+        "address": "경상북도 구미시 선산읍 남문로 38, 1층 명약국",
+        "x": 128.301737,
+        "y": 36.2411669,
+        "pharmacists": 2
+    },
+    {
+        "ykiho": "JDU4MTI3MSM1MSMkMSMkMCMkMDMkNDgxNzAyIzIxIyQxIyQ1IyQwMyQzNjE0ODEjNDEjJDEjJDQjJDgz",
+        "name": "명약국",
+        "address": "경기도 구리시 장자대로37번길 55, 112호 (교문동, 덕현아파트상가)",
+        "x": 127.1336356,
+        "y": 37.5906777,
+        "pharmacists": 2
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM2MSMkMSMkMiMkMDMkNDgxMzUxIzUxIyQxIyQ1IyQ5MiQyNjE4MzIjNjEjJDEjJDAjJDgz",
+        "name": "명약국",
+        "address": "대전광역시 중구 보문로 301, 대한결핵협회 102호 (선화동)",
+        "x": 127.4200431,
+        "y": 36.3291384,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTg4MSM1MSMkMSMkNCMkMDMkMzgxNzAyIzExIyQxIyQzIyQ3MiQyNjE0ODEjNDEjJDEjJDQjJDgz",
+        "name": "명약국",
+        "address": "서울특별시 금천구 시흥대로 473, (독산동)",
+        "x": 126.8980969,
+        "y": 37.4759429,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDU4MTI3MSM1MSMkMSMkMCMkMDMkNDgxMTkxIzMxIyQxIyQzIyQ2MiQyNjEyMjIjNDEjJDEjJDgjJDgz",
+        "name": "명약국",
+        "address": "경기도 시흥시 신천천동로 7, 두성빌딩 102호 (신천동)",
+        "x": 126.7862583,
+        "y": 37.4392488,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTg4MSM1MSMkMSMkNCMkMDMkNDgxNzAyIzUxIyQxIyQxIyQ4MiQzNjEwMDIjNDEjJDEjJDgjJDgz",
+        "name": "명약국",
+        "address": "서울특별시 마포구 마포대로 68, 112호 (도화동, 마포아크로타워)",
+        "x": 126.9490623,
+        "y": 37.5413382,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTg4MSM1MSMkMSMkNCMkMDMkNDgxMTkxIzUxIyQxIyQ1IyQ3OSQ0NjEwMDIjNDEjJDEjJDgjJDgz",
+        "name": "명약국",
+        "address": "서울특별시 송파구 거마로 62, 효명빌딩 1층 (마천동)",
+        "x": 127.1470353,
+        "y": 37.4984284,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM1MSMkMSMkMCMkMDMkNTgxOTYxIzIxIyQxIyQ5IyQwMyQzNjE0ODEjNjEjJDEjJDAjJDgz",
+        "name": "명약국",
+        "address": "경기도 오산시 대원로 3, (오산동)",
+        "x": 127.0688496,
+        "y": 37.1465956,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM2MSMkMSMkNiMkMDMkMzgxMzUxIzIxIyQxIyQ1IyQ4MiQzNjEyMjIjNjEjJDEjJDQjJDgz",
+        "name": "명약국",
+        "address": "전북특별자치도 익산시 군익로 463, (송학동)",
+        "x": 126.9367432,
+        "y": 35.9432541,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM4MSMkMSMkMCMkMDMkMzgxNzAyIzIxIyQxIyQ5IyQ4OSQzNjEyMjIjODEjJDEjJDYjJDgz",
+        "name": "명약국",
+        "address": "대구광역시 달서구 월곡로 320, 112동 1층 101호 (상인동)",
+        "x": 128.5352468,
+        "y": 35.8228869,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM1MSMkMSMkMCMkMDMkNDgxNzAyIzUxIyQxIyQxIyQ5OSQyNjEyMjIjODEjJDEjJDYjJDgz",
+        "name": "명약국",
+        "address": "경기도 여주시 세종로 34, 1층 (홍문동)",
+        "x": 127.636021,
+        "y": 37.2948542,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM2MSMkMSMkNiMkMDMkMzgxMzUxIzExIyQxIyQ3IyQ5OSQyNjEyMjIjNDEjJDEjJDgjJDgz",
+        "name": "명약국",
+        "address": "전북특별자치도 전주시 완산구 견훤왕궁로 72, 1층 (중노송동)",
+        "x": 127.1538792,
+        "y": 35.8266136,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM1MSMkMSMkMCMkMDMkNDgxNzAyIzExIyQxIyQ3IyQ4OSQyNjE0ODEjNDEjJDEjJDgjJDgz",
+        "name": "명약국",
+        "address": "경기도 성남시 수정구 수정로 167, 2층 (태평동)",
+        "x": 127.1385844,
+        "y": 37.4432127,
+        "pharmacists": 2
+    },
+    {
+        "ykiho": "JDQ4MTg4MSM1MSMkMSMkNCMkMDMkNDgxMTkxIzIxIyQxIyQ1IyQ5OSQzNjEwMDIjNjEjJDEjJDAjJDgz",
+        "name": "명약국",
+        "address": "서울특별시 중구 남대문로9길 51, 효덕빌딩 5층 (을지로1가)",
+        "x": 126.9795087,
+        "y": 37.5668152,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM2MSMkMSMkMiMkMDMkMzgxMTkxIzExIyQyIyQzIyQwMCQyNjEyMjIjODEjJDEjJDYjJDgz",
+        "name": "명약국",
+        "address": "대전광역시 동구 옥천로 148, (판암동)",
+        "x": 127.4566505,
+        "y": 36.3166631,
+        "pharmacists": 2
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM4MSMkMSMkNCMkMDMkNDgxMzUxIzExIyQxIyQ3IyQwMyQzNjEyMjIjNDEjJDEjJDQjJDgz",
+        "name": "명약국",
+        "address": "경상남도 창원시 의창구 창이대로15번길 24, 102호 (팔용동, 서주빌딩)",
+        "x": 128.6426779,
+        "y": 35.2357938,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM1MSMkMSMkMCMkMDMkMzgxMTkxIzMxIyQxIyQ3IyQ4OSQyNjE0ODEjNjEjJDEjJDQjJDgz",
+        "name": "명약국",
+        "address": "경기도 화성시 경기대로 1036, (진안동)",
+        "x": 127.035223,
+        "y": 37.2081995,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM1MSMkMSMkMCMkMDMkNTgxMzUxIzExIyQxIyQzIyQ3MiQzNjEwMDIjNDEjJDEjJDQjJDgz",
+        "name": "명약국",
+        "address": "경기도 안양시 만안구 안양로 298, 지층 (안양동)",
+        "x": 126.9216529,
+        "y": 37.3989687,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM4MSMkMSMkMCMkMDMkMzgxMTkxIzUxIyQyIyQ1IyQwMCQyNjEyMjIjNzEjJDEjJDgjJDgz",
+        "name": "명약국",
+        "address": "대구광역시 동구 신암로18길 12-1, (신천동)",
+        "x": 128.6119308,
+        "y": 35.877621,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTg4MSM1MSMkMSMkMCMkMDMkMzgxMTkxIzExIyQxIyQzIyQ2MiQ0NjE0ODEjODEjJDEjJDYjJDgz",
+        "name": "명약국",
+        "address": "서울특별시 동대문구 망우로18나길 3, 1층 (휘경동)",
+        "x": 127.0605798,
+        "y": 37.5873546,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM4MSMkMSMkNCMkMDMkMzgxNzAyIzQxIyQxIyQ3IyQ4MiQzNjE0ODEjNDEjJDEjJDgjJDgz",
+        "name": "명약국",
+        "address": "경상남도 진주시 대신로 477, 1층 (초전동)",
+        "x": 128.1157182,
+        "y": 35.2032371,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM4MSMkMSMkNCMkMDMkMzgxNzAyIzExIyQxIyQ3IyQ2MiQ0NjEwMDIjNDEjJDEjJDQjJDgz",
+        "name": "명약국",
+        "address": "경상남도 김해시 능동로 159, 102호 (부곡동, 메디피아빌딩)",
+        "x": 128.8085676,
+        "y": 35.2029088,
+        "pharmacists": 2
+    },
+    {
+        "ykiho": "JDU4MTI3MSM1MSMkMSMkMCMkMDMkMzgxOTYxIzUxIyQxIyQxIyQ4MiQ0NjEwMDIjNjEjJDEjJDQjJDgz",
+        "name": "명약국",
+        "address": "경기도 성남시 중원구 산성대로372번길 3, (금광동)",
+        "x": 127.1575293,
+        "y": 37.4452336,
+        "pharmacists": 2
+    },
+    {
+        "ykiho": "JDQ4MTg4MSM1MSMkMSMkMCMkMDMkNTgxMzUxIzUxIyQxIyQxIyQ3MiQzNjEyMjIjNTEjJDEjJDYjJDgz",
+        "name": "명약국",
+        "address": "서울특별시 광진구 아차산로 532, 101호 (광장동, 진넥스빌딩)",
+        "x": 127.1004998,
+        "y": 37.5423992,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDU4MTI3MSM1MSMkMSMkMCMkMDMkMzgxNzAyIzMxIyQxIyQzIyQ4MiQzNjE0ODEjNjEjJDEjJDgjJDgz",
+        "name": "명약국",
+        "address": "경기도 평택시 비전5로 11, 4층 403호 (비전동)",
+        "x": 127.1126122,
+        "y": 37.0001234,
+        "pharmacists": 2
+    },
+    {
+        "ykiho": "JDQ4MTg4MSM1MSMkMSMkMCMkMDMkMzgxMzUxIzExIyQxIyQ3IyQ4OSQzNjEyMjIjNjEjJDEjJDgjJDgz",
+        "name": "명옥약국",
+        "address": "서울특별시 강남구 압구정로 212, (신사동)",
+        "x": 127.0304776,
+        "y": 37.5278531,
+        "pharmacists": 2
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM4MSMkMSMkOCMkMDMkMzgxMzUxIzIxIyQxIyQ1IyQ2MiQzNjEwMDIjNzEjJDEjJDgjJDgz",
+        "name": "명원약국",
+        "address": "제주특별자치도 제주시 동광로 100, (일도이동,1층)",
+        "x": 126.5384586,
+        "y": 33.5054994,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDU4MTI3MSM1MSMkMSMkMCMkMDMkNDgxMzUxIzIxIyQxIyQxIyQxMyQzNjE4MzIjODEjJDEjJDYjJDgz",
+        "name": "명원한약국",
+        "address": "경기도 남양주시 다산중앙로123번길 22-26, 130호 (다산동)",
+        "x": 127.1524234,
+        "y": 37.6248697,
+        "pharmacists": 0
+    },
+    {
+        "ykiho": "JDQ4MTg4MSM1MSMkMSMkNCMkMDMkNTgxMzUxIzIxIyQxIyQ1IyQ5OSQzNjEwMDIjNjEjJDEjJDQjJDgz",
+        "name": "명음약국",
+        "address": "서울특별시 서대문구 신촌로35길 10, 117호 (북아현동, e편한세상신촌 4단지)",
+        "x": 126.9558605,
+        "y": 37.5586219,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM4MSMkMSMkMCMkMDMkMzgxNzAyIzUxIyQxIyQxIyQ5MiQyNjEyMjIjNjEjJDEjJDQjJDgz",
+        "name": "명인당약국",
+        "address": "경상북도 구미시 인동가산로 33, (인의동)",
+        "x": 128.4199544,
+        "y": 36.1062739,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM1MSMkMSMkMCMkMDMkMzgxOTYxIzQxIyQxIyQ3IyQ4MiQyNjEyMjIjODEjJDEjJDYjJDgz",
+        "name": "명인당약국",
+        "address": "경기도 안양시 만안구 양화로 152-10, (박달동)",
+        "x": 126.9090158,
+        "y": 37.4061629,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM4MSMkMSMkOCMkMDMkMzgxMzUxIzIxIyQxIyQ5IyQwMyQyNjE4MzIjNjEjJDEjJDgjJDgz",
+        "name": "명인약국",
+        "address": "제주특별자치도 제주시 연북로 511, 에이플렉스 1층 (아라일동)",
+        "x": 126.5346355,
+        "y": 33.4843386,
+        "pharmacists": 3
+    },
+    {
+        "ykiho": "JDU4MTI3MSM1MSMkMSMkMCMkMDMkNDgxNzAyIzExIyQxIyQzIyQ4MiQzNjE0ODEjNjEjJDEjJDgjJDgz",
+        "name": "명인약국",
+        "address": "경기도 파주시 조리읍 통일로 317, 봉일천타워 106호",
+        "x": 126.8089881,
+        "y": 37.7437129,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM1MSMkMSMkMCMkMDMkMzgxMzUxIzUxIyQxIyQxIyQ2MiQyNjE4MzIjNTEjJDEjJDYjJDgz",
+        "name": "명인약국",
+        "address": "경기도 수원시 팔달구 동말로77번길 28, (화서동)",
+        "x": 127.0028628,
+        "y": 37.2801127,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM2MSMkMSMkMiMkMDMkNDgxMzUxIzUxIyQxIyQ1IyQ5MiQ0NjEwMDIjNTEjJDEjJDYjJDgz",
+        "name": "명인약국",
+        "address": "충청남도 보령시 정화로길 26, (대천동)",
+        "x": 126.5963348,
+        "y": 36.3500572,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTAxMiM1MSMkMSMkMCMkMDMkMzgxNzAyIzExIyQxIyQ3IyQwMyQzNjEwMDIjODEjJDEjJDIjJDgz",
+        "name": "명인약국",
+        "address": "부산광역시 동래구 사직북로57번길 58, (사직동)",
+        "x": 129.0588202,
+        "y": 35.197371,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTAxMiM1MSMkMSMkMCMkMDMkNDgxMzUxIzIxIyQxIyQ1IyQ3OSQyNjE4MzIjNDEjJDEjJDgjJDgz",
+        "name": "명인약국",
+        "address": "부산광역시 연제구 연수로 224, (연산동)",
+        "x": 129.0951308,
+        "y": 35.173345,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM2MSMkMSMkMiMkMDMkMzgxMzUxIzExIyQxIyQzIyQ2MiQyNjEwMDIjNzEjJDEjJDgjJDgz",
+        "name": "명인약국",
+        "address": "대전광역시 유성구 테크노4로 105, 104호 (관평동)",
+        "x": 127.3897584,
+        "y": 36.4253029,
+        "pharmacists": 3
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM1MSMkMSMkNCMkMDMkMzgxMzUxIzQxIyQxIyQ3IyQ3OSQzNjEwMDIjODEjJDEjJDIjJDgz",
+        "name": "명인약국",
+        "address": "강원특별자치도 춘천시 영서로 2777, (우두동)",
+        "x": 127.7284765,
+        "y": 37.9011692,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM4MSMkMSMkMCMkMDMkMzgxMzUxIzExIyQxIyQ3IyQ5OSQyNjEwMDIjNDEjJDEjJDQjJDgz",
+        "name": "명인약국",
+        "address": "대구광역시 동구 동촌로 45, (입석동)",
+        "x": 128.6478434,
+        "y": 35.8899376,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM4MSMkMSMkNCMkMDMkMzgxOTYxIzMxIyQxIyQ3IyQ3OSQzNjEyMjIjNzEjJDEjJDgjJDgz",
+        "name": "명인약국",
+        "address": "울산광역시 동구 대학길 75, (화정동)",
+        "x": 129.4219105,
+        "y": 35.4988153,
+        "pharmacists": 2
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM1MSMkMSMkNCMkMDMkMzgxMzUxIzIxIyQxIyQ5IyQ4OSQzNjE4MzIjNTEjJDEjJDIjJDgz",
+        "name": "명인약국",
+        "address": "강원특별자치도 삼척시 도계읍 도계로 297-6, 297",
+        "x": 129.0442824,
+        "y": 37.2357879,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM1MSMkMSMkNCMkMDMkMzgxOTYxIzIxIyQxIyQxIyQ4OSQ0NjE0ODEjNTEjJDEjJDYjJDgz",
+        "name": "명인약국",
+        "address": "강원특별자치도 인제군 남면 신남로58번길 13, (남면)",
+        "x": 128.0812734,
+        "y": 37.9674251,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM2MSMkMSMkMiMkMDMkMzgxMTkxIzMxIyQxIyQ3IyQ5OSQzNjE0ODEjNjEjJDEjJDgjJDgz",
+        "name": "명인약국",
+        "address": "충청남도 청양군 청양읍 중앙로3길 2, (청양읍)",
+        "x": 126.80252,
+        "y": 36.4491771,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDU4MTI3MSM1MSMkMSMkMCMkMDMkMzgxOTYxIzUxIyQxIyQ1IyQ4OSQzNjEwMDIjNTEjJDEjJDIjJDgz",
+        "name": "명인약국",
+        "address": "경기도 용인시 처인구 금령로 101, 용인중앙동우체국 2층 (김량장동)",
+        "x": 127.2077191,
+        "y": 37.2359342,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM4MSMkMSMkNCMkMDMkMzgxOTYxIzExIyQxIyQzIyQ2MiQyNjEyMjIjNjEjJDEjJDQjJDgz",
+        "name": "명인약국",
+        "address": "경상남도 김해시 번화1로79번길 2, 207-1호 (대청동, 센터빌딩)",
+        "x": 128.7992039,
+        "y": 35.1944371,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM4MSMkMSMkNCMkMDMkMzgxOTYxIzExIyQxIyQzIyQxMyQyNjE0ODEjNjEjJDEjJDQjJDgz",
+        "name": "명인약국",
+        "address": "울산광역시 남구 봉월로 170, 1층 (신정동)",
+        "x": 129.3079613,
+        "y": 35.5474863,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM3MSMkMSMkMCMkMDMkMzgxNzAyIzExIyQxIyQzIyQ5OSQ0NjEwMDIjNDEjJDEjJDgjJDgz",
+        "name": "명인원한약국",
+        "address": "광주광역시 남구 군분로66번길 5-1, (월산동)",
+        "x": 126.8929111,
+        "y": 35.1395726,
+        "pharmacists": 0
+    },
+    {
+        "ykiho": "JDQ4MTg4MSM1MSMkMSMkNCMkMDMkNDgxMTkxIzIxIyQxIyQ5IyQ5MiQzNjEyMjIjNjEjJDEjJDQjJDgz",
+        "name": "명일로약국",
+        "address": "서울특별시 강동구 명일로 270, 1층 (길동)",
+        "x": 127.1477709,
+        "y": 37.5426064,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTg4MSM1MSMkMSMkNCMkMDMkMzgxMzUxIzExIyQxIyQzIyQ5MiQzNjE0ODEjNDEjJDEjJDgjJDgz",
+        "name": "명일마트종로약국",
+        "address": "서울특별시 강동구 고덕로 276, 지하1층 (명일동, 이마트명일점)",
+        "x": 127.1556132,
+        "y": 37.5547067,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTg4MSM1MSMkMSMkNCMkMDMkNTgxMzUxIzUxIyQxIyQxIyQ3OSQyNjEwMDIjNDEjJDEjJDQjJDgz",
+        "name": "명일약국",
+        "address": "서울특별시 강동구 양재대로 1626, 202호 (명일동)",
+        "x": 127.1443104,
+        "y": 37.5506521,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM4MSMkMSMkMCMkMDMkMzgxNzAyIzIxIyQxIyQ1IyQ5MiQ0NjE0ODEjNTEjJDEjJDIjJDgz",
+        "name": "명일약국",
+        "address": "경상북도 구미시 인동중앙로 39-4, (황상동)",
+        "x": 128.4224218,
+        "y": 36.1086851,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM4MSMkMSMkMCMkMDMkMzgxNzAyIzIxIyQxIyQ1IyQ2MiQzNjEyMjIjNjEjJDEjJDAjJDgz",
+        "name": "명일약국",
+        "address": "대구광역시 서구 달서로 270, (원대동3가)",
+        "x": 128.5745788,
+        "y": 35.8857372,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTg4MSM1MSMkMSMkNCMkMDMkNDgxNzAyIzUxIyQxIyQxIyQ4OSQzNjE0ODEjNjEjJDEjJDgjJDgz",
+        "name": "명일열린메디컬약국",
+        "address": "서울특별시 강동구 양재대로 1625, 숨결TOWER 1층 104,105,106호 (천호동)",
+        "x": 127.143514,
+        "y": 37.5505741,
+        "pharmacists": 2
+    },
+    {
+        "ykiho": "JDQ4MTg4MSM1MSMkMSMkNCMkMDMkMzgxMTkxIzMxIyQxIyQ3IyQxMyQ0NjEwMDIjNjEjJDEjJDQjJDgz",
+        "name": "명일정원약국",
+        "address": "서울특별시 강동구 구천면로 428, 305호 (명일동, 센트로빌)",
+        "x": 127.1461669,
+        "y": 37.550162,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTAxMiM1MSMkMSMkMCMkMDMkMzgxMTkxIzQxIyQxIyQ3IyQwMyQzNjE4MzIjNzEjJDEjJDgjJDgz",
+        "name": "명장온누리약국",
+        "address": "부산광역시 동래구 명장로 50, (명장동)",
+        "x": 129.1064255,
+        "y": 35.2046341,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM4MSMkMSMkNCMkMDMkMzgxOTYxIzIxIyQxIyQxIyQwMyQzNjE4MzIjODEjJDEjJDIjJDgz",
+        "name": "명정약국",
+        "address": "울산광역시 중구 태화로 124, (태화동)",
+        "x": 129.2895224,
+        "y": 35.5531127,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTAxMiM1MSMkMSMkMCMkMDMkNDgxMzUxIzExIyQxIyQ3IyQ5OSQyNjE0ODEjODEjJDEjJDYjJDgz",
+        "name": "명지돌고래약국",
+        "address": "부산광역시 강서구 명지국제8로 257, 109호 (명지동)",
+        "x": 128.9208989,
+        "y": 35.0982763,
+        "pharmacists": 2
+    },
+    {
+        "ykiho": "JDQ4MTg4MSM1MSMkMSMkNCMkMDMkNTgxMzUxIzUxIyQxIyQ1IyQwMyQ0NjEwMDIjNDEjJDEjJDQjJDgz",
+        "name": "명지약국",
+        "address": "서울특별시 서대문구 증가로 150, 제상가동 제지3층 제비302호 (남가좌동, DMC센트럴아이파크)",
+        "x": 126.920548,
+        "y": 37.5788341,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM2MSMkMSMkMiMkMDMkMzgxMzUxIzIxIyQyIyQ5IyQwMCQzNjEwMDIjODEjJDEjJDIjJDgz",
+        "name": "명지약국",
+        "address": "대전광역시 서구 대덕대로 197, 1층 일부호 (둔산동)",
+        "x": 127.3777058,
+        "y": 36.3508832,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM2MSMkMSMkMiMkMDMkNDgxMzUxIzQxIyQyIyQ3IyQwMCQ0NjEwMDIjNDEjJDEjJDgjJDgz",
+        "name": "명지약국",
+        "address": "세종특별자치시 다정중앙로 58, 다정메디프라자 108호 (다정동)",
+        "x": 127.2492274,
+        "y": 36.495625,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM3MSMkMSMkMCMkMDMkMzgxMzUxIzMxIyQyIyQzIyQwMCQyNjE4MzIjNjEjJDEjJDQjJDgz",
+        "name": "명지약국",
+        "address": "광주광역시 북구 무등로 102, (신안동)",
+        "x": 126.8951408,
+        "y": 35.1677225,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM2MSMkMSMkMiMkMDMkMzgxOTYxIzExIyQyIyQ3IyQwMCQ0NjE0ODEjODEjJDEjJDYjJDgz",
+        "name": "명지약국",
+        "address": "대전광역시 중구 당디로6번길 70, (문화동)",
+        "x": 127.3980734,
+        "y": 36.3071218,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM2MSMkMSMkMiMkMDMkMzgxMzUxIzIxIyQxIyQxIyQ5OSQyNjE0ODEjNzEjJDEjJDgjJDgz",
+        "name": "명지약국",
+        "address": "대전광역시 동구 태전로 169, (삼성동)",
+        "x": 127.4189898,
+        "y": 36.3422587,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM1MSMkMSMkMCMkMDMkNDgxMzUxIzUxIyQxIyQ1IyQ3MiQzNjE4MzIjNDEjJDEjJDgjJDgz",
+        "name": "명지약국",
+        "address": "인천광역시 남동구 담방로 105, 7701동 103호 (만수동, 만수주공7단지임대상가)",
+        "x": 126.7400216,
+        "y": 37.4501834,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM3MSMkMSMkMCMkMDMkMzgxNzAyIzMxIyQxIyQzIyQ5OSQzNjEwMDIjNDEjJDEjJDgjJDgz",
+        "name": "명지약국",
+        "address": "전라남도 해남군 해남읍 남부순환로 159, 청치과의원",
+        "x": 126.5943034,
+        "y": 34.5654404,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTAxMiM1MSMkMSMkMCMkMDMkMzgxNzAyIzUxIyQxIyQxIyQ4MiQyNjEyMjIjNTEjJDEjJDYjJDgz",
+        "name": "명지약국",
+        "address": "부산광역시 강서구 명지오션시티4로 67, 105호 (명지동)",
+        "x": 128.9039621,
+        "y": 35.0830186,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM4MSMkMSMkNCMkMDMkMzgxOTYxIzExIyQxIyQzIyQxMyQ0NjE0ODEjNDEjJDEjJDgjJDgz",
+        "name": "명지약국",
+        "address": "경상남도 창원시 마산합포구 3·15대로 238-1, (중앙동3가)",
+        "x": 128.5675322,
+        "y": 35.199472,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDU4MTI3MSM1MSMkMSMkMCMkMDMkMzgxMzUxIzIxIyQxIyQ1IyQ4OSQzNjE4MzIjNjEjJDEjJDQjJDgz",
+        "name": "명지약국",
+        "address": "경기도 용인시 처인구 중부대로 1305, 1층 (역북동, 홍양빌딩)",
+        "x": 127.1899798,
+        "y": 37.2362529,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTAxMiM1MSMkMSMkMCMkMDMkNDgxMzUxIzExIyQxIyQzIyQ4OSQyNjEwMDIjNTEjJDEjJDYjJDgz",
+        "name": "명지온누리약국",
+        "address": "부산광역시 강서구 명지국제8로 245, 105호 (명지동, 명지뉴타워복합상가105호)",
+        "x": 128.9198442,
+        "y": 35.0984094,
+        "pharmacists": 2
+    },
+    {
+        "ykiho": "JDU4MTI3MSM1MSMkMSMkMCMkMDMkMzgxMTkxIzUxIyQxIyQxIyQwMyQyNjE4MzIjNjEjJDEjJDgjJDgz",
+        "name": "명지옵티마약국",
+        "address": "경기도 광명시 오리로 865, 1층 2호 (철산동)",
+        "x": 126.8658275,
+        "y": 37.4752559,
+        "pharmacists": 5
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM1MSMkMSMkMCMkMDMkNTgxMzUxIzExIyQxIyQ3IyQ3OSQzNjEwMDIjNDEjJDEjJDQjJDgz",
+        "name": "명진당약국",
+        "address": "경기도 수원시 팔달구 덕영대로697번길 16, 상가동 103,104호 (화서동, 화서4단지주공아파트내)",
+        "x": 126.9911492,
+        "y": 37.2845954,
+        "pharmacists": 2
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM4MSMkMSMkNCMkMDMkNDgxMzUxIzIxIyQxIyQ5IyQ4OSQzNjE4MzIjNjEjJDEjJDgjJDgz",
+        "name": "명진약국",
+        "address": "경상남도 창원시 진해구 웅동로 72, 104호 (마천동, 남명프라자)",
+        "x": 128.7840172,
+        "y": 35.1246041,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM1MSMkMSMkNCMkMDMkMzgxMzUxIzMxIyQxIyQzIyQ3MiQyNjE4MzIjNjEjJDEjJDQjJDgz",
+        "name": "명진약국",
+        "address": "강원특별자치도 동해시 발한로 69, (부곡동)",
+        "x": 129.1015261,
+        "y": 37.5385698,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTAxMiM1MSMkMSMkMCMkMDMkMzgxMzUxIzIxIyQxIyQ1IyQ5MiQyNjEwMDIjNjEjJDEjJDAjJDgz",
+        "name": "명진약국",
+        "address": "부산광역시 남구 용소로7번길 75, (대연동)",
+        "x": 129.1039373,
+        "y": 35.1384254,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM4MSMkMSMkNCMkMDMkNDgxMzUxIzIxIyQxIyQ5IyQwMyQyNjE0ODEjNDEjJDEjJDQjJDgz",
+        "name": "명진약국",
+        "address": "경상남도 밀양시 중앙로 339, (내일동)",
+        "x": 128.7538674,
+        "y": 35.4930528,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTAxMiM1MSMkMSMkMCMkMDMkNDgxMzUxIzQxIyQxIyQ3IyQ2MiQyNjEyMjIjODEjJDEjJDIjJDgz",
+        "name": "명진약국",
+        "address": "부산광역시 부산진구 봉수로20번길 6, (전포동)",
+        "x": 129.070447,
+        "y": 35.1502845,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM1MSMkMSMkNCMkMDMkMzgxMzUxIzIxIyQxIyQ5IyQ4MiQyNjEwMDIjNDEjJDEjJDQjJDgz",
+        "name": "명진약국",
+        "address": "강원특별자치도 정선군 정선읍 녹송2길 1, 1",
+        "x": 128.6710995,
+        "y": 37.3822276,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM1MSMkMSMkMCMkMDMkNDgxOTYxIzExIyQyIyQ3IyQwMCQ0NjE0ODEjNDEjJDEjJDQjJDgz",
+        "name": "명진약국",
+        "address": "경기도 안양시 만안구 안양로 147, (안양동)",
+        "x": 126.930564,
+        "y": 37.3874064,
+        "pharmacists": 2
+    },
+    {
+        "ykiho": "JDQ4MTAxMiM1MSMkMSMkMCMkMDMkMzgxOTYxIzUxIyQxIyQxIyQ5OSQ0NjE0ODEjNTEjJDEjJDIjJDgz",
+        "name": "명진약국",
+        "address": "부산광역시 부산진구 중앙대로 803, 1층 일부 (부전동)",
+        "x": 129.0632766,
+        "y": 35.1636217,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM2MSMkMSMkMiMkMDMkMzgxNzAyIzIxIyQxIyQ5IyQ3OSQ0NjE0ODEjNzEjJDEjJDgjJDgz",
+        "name": "명진약국",
+        "address": "충청남도 천안시 동남구 망향로 187, (안서동, 영남빌딩)",
+        "x": 127.1740061,
+        "y": 36.8399336,
+        "pharmacists": 4
+    },
+    {
+        "ykiho": "JDQ4MTAxMiM1MSMkMSMkMCMkMDMkNDgxMzUxIzExIyQxIyQzIyQ3MiQzNjE0ODEjNzEjJDEjJDgjJDgz",
+        "name": "명진약국",
+        "address": "부산광역시 동구 성남이로 21, 1층 (좌천동)",
+        "x": 129.0568018,
+        "y": 35.1323354,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTg4MSM1MSMkMSMkMCMkMDMkMzgxNzAyIzUxIyQxIyQxIyQ3OSQ0NjEwMDIjNjEjJDEjJDAjJDgz",
+        "name": "명진약국",
+        "address": "서울특별시 용산구 신흥로36길 3, (후암동)",
+        "x": 126.9818415,
+        "y": 37.5465617,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTg4MSM1MSMkMSMkMCMkMDMkMzgxMzUxIzIxIyQxIyQ1IyQ4OSQyNjEyMjIjNjEjJDEjJDgjJDgz",
+        "name": "명진팜약국",
+        "address": "서울특별시 관악구 남부순환로 2064, 102호 (남현동)",
+        "x": 126.9780869,
+        "y": 37.4763821,
+        "pharmacists": 2
+    },
+    {
+        "ykiho": "JDQ4MTg4MSM1MSMkMSMkNCMkMDMkNDgxMTkxIzUxIyQxIyQxIyQwMyQyNjE4MzIjNTEjJDEjJDYjJDgz",
+        "name": "명진팜약국",
+        "address": "서울특별시 강서구 마곡중앙로 161-17, 보타닉파크타워Ⅰ 110호 (마곡동)",
+        "x": 126.8259608,
+        "y": 37.5680581,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTg4MSM1MSMkMSMkMCMkMDMkMzgxMTkxIzQxIyQxIyQ3IyQwMyQyNjEyMjIjNTEjJDEjJDYjJDgz",
+        "name": "명치약국",
+        "address": "서울특별시 마포구 임정로15길 13, 1층 (신공덕동)",
+        "x": 126.9572359,
+        "y": 37.5433475,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM1MSMkMSMkOCMkMDMkMzgxOTYxIzIxIyQxIyQ1IyQxMyQyNjEwMDIjNjEjJDEjJDAjJDgz",
+        "name": "명품캐슬약국",
+        "address": "충청북도 청주시 서원구 예체로 55, 112호 (사직동, 상가)",
+        "x": 127.4683866,
+        "y": 36.6311611,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM4MSMkMSMkMCMkMDMkNDgxOTYxIzIxIyQxIyQ1IyQ3OSQyNjEwMDIjNjEjJDEjJDQjJDgz",
+        "name": "명플러스 약국",
+        "address": "경상북도 김천시 자산로 62, (모암동)",
+        "x": 128.1250207,
+        "y": 36.1195998,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM2MSMkMSMkNiMkMDMkMzgxMzUxIzUxIyQxIyQxIyQ4OSQ0NjEwMDIjNjEjJDEjJDQjJDgz",
+        "name": "명현약국",
+        "address": "전북특별자치도 전주시 완산구 온고을로 119, 115동 117호 (서신동)",
+        "x": 127.1108735,
+        "y": 35.8330703,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTg4MSM1MSMkMSMkNCMkMDMkNDgxNzAyIzUxIyQxIyQ1IyQ5MiQzNjEyMjIjNTEjJDEjJDIjJDgz",
+        "name": "모건약국",
+        "address": "서울특별시 강남구 테헤란로 120, 상경빌딩 1층 (역삼동)",
+        "x": 127.0309467,
+        "y": 37.4986172,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDU4MTI3MSM1MSMkMSMkNCMkMDMkMzgxMzUxIzIxIyQxIyQxIyQ4OSQyNjE0ODEjNjEjJDEjJDQjJDgz",
+        "name": "모나약국",
+        "address": "경기도 수원시 팔달구 중부대로 141, 메타타워Ⅱ B101호 (우만동)",
+        "x": 127.0315463,
+        "y": 37.2786985,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTAxMiM1MSMkMSMkMCMkMDMkNDgxMzUxIzMxIyQxIyQzIyQxMyQyNjE4MzIjNDEjJDEjJDQjJDgz",
+        "name": "모닝약국",
+        "address": "부산광역시 남구 용호로 56, 1층 (용호동)",
+        "x": 129.1099571,
+        "y": 35.1260862,
+        "pharmacists": 2
+    },
+    {
+        "ykiho": "JDU4MTI3MSM1MSMkMSMkMCMkMDMkMzgxOTYxIzUxIyQxIyQ1IyQ4OSQyNjEwMDIjNDEjJDEjJDQjJDgz",
+        "name": "모닝약국",
+        "address": "경기도 안산시 상록구 본삼로 49, 102호 (본오동, 대명빌딩)",
+        "x": 126.8655187,
+        "y": 37.3010955,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTg4MSM1MSMkMSMkNCMkMDMkNTgxMzUxIzIxIyQxIyQxIyQwMyQzNjE0ODEjNjEjJDEjJDAjJDgz",
+        "name": "모닝약국",
+        "address": "서울특별시 서대문구 증가로 84, 102호 (연희동)",
+        "x": 126.9271289,
+        "y": 37.5749873,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM2MSMkMSMkMiMkMDMkNDgxMzUxIzUxIyQxIyQxIyQxMyQzNjEyMjIjNzEjJDEjJDgjJDgz",
+        "name": "모닝약국",
+        "address": "대전광역시 서구 월평북로 79, 1층 (월평동)",
+        "x": 127.377097,
+        "y": 36.3624518,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTAxMiM1MSMkMSMkMCMkMDMkMzgxNzAyIzMxIyQxIyQzIyQ2MiQyNjE0ODEjNTEjJDEjJDYjJDgz",
+        "name": "모닝약국",
+        "address": "부산광역시 북구 만덕대로 13, (덕천동)",
+        "x": 129.0065449,
+        "y": 35.2106933,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTAxMiM1MSMkMSMkMCMkMDMkMzgxMTkxIzUxIyQxIyQ1IyQwMyQzNjE0ODEjNjEjJDEjJDQjJDgz",
+        "name": "모닝약국",
+        "address": "부산광역시 부산진구 중앙대로 726, (부전동)",
+        "x": 129.0599817,
+        "y": 35.1574358,
+        "pharmacists": 2
+    },
+    {
+        "ykiho": "JDU4MTI3MSM1MSMkMSMkMCMkMDMkMzgxNzAyIzExIyQxIyQ3IyQ5OSQzNjE4MzIjNjEjJDEjJDgjJDgz",
+        "name": "모닝약국",
+        "address": "경기도 화성시 동탄솔빛로 53, 2층 205호 (반송동, 모닝타운)",
+        "x": 127.0733162,
+        "y": 37.1939137,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDU4MTI3MSM1MSMkMSMkMCMkMDMkMzgxNzAyIzUxIyQxIyQ1IyQ5OSQyNjEwMDIjODEjJDEjJDIjJDgz",
+        "name": "모닝약국",
+        "address": "경기도 평택시 소사2길 4, 1층 (소사동)",
+        "x": 127.1214909,
+        "y": 36.9899128,
+        "pharmacists": 4
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM4MSMkMSMkNCMkMDMkMzgxNzAyIzExIyQxIyQ3IyQ5MiQzNjE4MzIjNjEjJDEjJDQjJDgz",
+        "name": "모닝약국",
+        "address": "경상남도 창원시 의창구 사화로 6, (팔용동)",
+        "x": 128.6086412,
+        "y": 35.2572597,
+        "pharmacists": 3
+    },
+    {
+        "ykiho": "JDQ4MTg4MSM1MSMkMSMkNCMkMDMkMzgxNzAyIzExIyQxIyQ3IyQxMyQyNjE0ODEjNjEjJDEjJDQjJDgz",
+        "name": "모닝온누리약국",
+        "address": "서울특별시 서초구 강남대로 341, 지하1층 (서초동, 삼원빌딩)",
+        "x": 127.0293874,
+        "y": 37.4932705,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDU4MTI3MSM1MSMkMSMkMCMkMDMkNDgxMzUxIzIxIyQxIyQ1IyQ4OSQyNjEwMDIjODEjJDEjJDIjJDgz",
+        "name": "모다365약국",
+        "address": "경기도 시흥시 장현능곡로 155, 시흥 플랑드르 5층 503호 (능곡동)",
+        "x": 126.8073771,
+        "y": 37.3710435,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM3MSMkMSMkMCMkMDMkMzgxNzAyIzMxIyQyIyQ3IyQwMCQzNjE4MzIjNDEjJDEjJDgjJDgz",
+        "name": "모더나약국",
+        "address": "광주광역시 서구 상무자유로 179, 프레지아빌딩 1층 105호 (치평동)",
+        "x": 126.8538784,
+        "y": 35.1520127,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDU4MTI3MSM1MSMkMSMkMCMkMDMkMzgxMTkxIzUxIyQxIyQxIyQ2MiQzNjE0ODEjNjEjJDEjJDQjJDgz",
+        "name": "모던 한방약국",
+        "address": "인천광역시 강화군 강화읍 중앙로 18, (강화읍)",
+        "x": 126.4910373,
+        "y": 37.7415199,
+        "pharmacists": 0
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM2MSMkMSMkMiMkMDMkNDgxMzUxIzUxIyQxIyQ1IyQ2MiQzNjEyMjIjNzEjJDEjJDgjJDgz",
+        "name": "모두라온약국",
+        "address": "대전광역시 서구 대덕대로 227, B2-01호 (둔산동)",
+        "x": 127.378921,
+        "y": 36.3531329,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDU4MTI3MSM1MSMkMSMkMCMkMDMkMzgxOTYxIzUxIyQxIyQxIyQ2MiQyNjEwMDIjNjEjJDEjJDQjJDgz",
+        "name": "모두사랑약국",
+        "address": "경기도 용인시 기흥구 중부대로 375, 1층 롯데캐슬스카이몰 8호 (신갈동, 기흥역롯데캐슬스카이)",
+        "x": 127.1089433,
+        "y": 37.2722065,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTg4MSM1MSMkMSMkNCMkMDMkNDgxOTYxIzMxIyQyIyQ3IyQwMCQyNjE4MzIjODEjJDEjJDYjJDgz",
+        "name": "모두약국",
+        "address": "서울특별시 강남구 테헤란로 156, B2층 219호 (역삼동)",
+        "x": 127.0366182,
+        "y": 37.5007163,
+        "pharmacists": 0
+    },
+    {
+        "ykiho": "JDQ4MTg4MSM1MSMkMSMkNCMkMDMkNDgxNzAyIzUxIyQxIyQ1IyQ3MiQyNjE0ODEjODEjJDEjJDYjJDgz",
+        "name": "모두온누리약국",
+        "address": "서울특별시 관악구 남부순환로 1869, 1층 (봉천동)",
+        "x": 126.9575783,
+        "y": 37.4798463,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTAxMiM1MSMkMSMkMCMkMDMkNDgxMzUxIzUxIyQxIyQxIyQ4MiQyNjEyMjIjODEjJDEjJDYjJDgz",
+        "name": "모두의약국",
+        "address": "부산광역시 기장군 기장읍 읍내로 108-1, 파크빌딩 101호",
+        "x": 129.2161885,
+        "y": 35.2449099,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDU4MTI3MSM1MSMkMSMkMCMkMDMkNDgxMzUxIzUxIyQxIyQxIyQ2MiQyNjE4MzIjODEjJDEjJDIjJDgz",
+        "name": "모두의약국",
+        "address": "경기도 고양시 일산서구 일산로 576, 106호 (일산동, 대성프라자)",
+        "x": 126.7645056,
+        "y": 37.679511,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTg4MSM1MSMkMSMkNCMkMDMkMzgxOTYxIzExIyQxIyQ3IyQxMyQyNjEwMDIjNTEjJDEjJDIjJDgz",
+        "name": "모드니온누리약국",
+        "address": "서울특별시 중구 서소문로 116, 유원빌딩 지하1층 B102호 (서소문동)",
+        "x": 126.9740244,
+        "y": 37.5627337,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTAxMiM1MSMkMSMkMCMkMDMkMzgxNzAyIzMxIyQxIyQzIyQ4OSQyNjE4MzIjNjEjJDEjJDgjJDgz",
+        "name": "모라명성약국",
+        "address": "부산광역시 사상구 사상로 481, 1층 (모라동)",
+        "x": 128.9872885,
+        "y": 35.1875041,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTAxMiM1MSMkMSMkMCMkMDMkMzgxNzAyIzMxIyQxIyQzIyQxMyQzNjEwMDIjNDEjJDEjJDgjJDgz",
+        "name": "모라열린약국",
+        "address": "부산광역시 사상구 백양대로 886, (모라동)",
+        "x": 128.9914681,
+        "y": 35.1856103,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDU4MTI3MSM1MSMkMSMkMCMkMDMkNDgxOTYxIzExIyQxIyQzIyQwMyQyNjEyMjIjNTEjJDEjJDYjJDgz",
+        "name": "모란시민약국",
+        "address": "경기도 성남시 중원구 둔촌대로 84, 1층 111호 (성남동)",
+        "x": 127.1284766,
+        "y": 37.4297249,
+        "pharmacists": 3
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM1MSMkMSMkMCMkMDMkNDgxMTkxIzExIyQxIyQ3IyQ4OSQyNjEyMjIjNDEjJDEjJDgjJDgz",
+        "name": "모란온누리약국",
+        "address": "경기도 성남시 중원구 성남대로 1132, 모란역 센트럴스퀘어 1층 101,109호 (성남동)",
+        "x": 127.1298465,
+        "y": 37.4309475,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDU4MTI3MSM1MSMkMSMkMCMkMDMkMzgxMTkxIzIxIyQxIyQ5IyQ4OSQyNjE4MzIjNDEjJDEjJDQjJDgz",
+        "name": "모란중앙약국",
+        "address": "경기도 성남시 중원구 성남대로 1149, 1층 (성남동)",
+        "x": 127.1286911,
+        "y": 37.4323854,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDU4MTI3MSM1MSMkMSMkNCMkMDMkMzgxMzUxIzIxIyQxIyQxIyQ4OSQzNjE4MzIjNTEjJDEjJDIjJDgz",
+        "name": "모란팜약국",
+        "address": "경기도 성남시 중원구 광명로 5, 성남동메디칼센타 1층 104호 (성남동)",
+        "x": 127.1296985,
+        "y": 37.4331759,
+        "pharmacists": 2
+    },
+    {
+        "ykiho": "JDU4MTI3MSM1MSMkMSMkMCMkMDMkMzgxNzAyIzIxIyQxIyQ5IyQ4OSQzNjE4MzIjODEjJDEjJDIjJDgz",
+        "name": "모래내 참사랑약국",
+        "address": "인천광역시 남동구 구월남로 283, 106호 (구월동)",
+        "x": 126.7211462,
+        "y": 37.4522739,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTYyMiM2MSMkMSMkNiMkMDMkMzgxMTkxIzIxIyQxIyQ5IyQ5MiQyNjEyMjIjNzEjJDEjJDgjJDgz",
+        "name": "모래내녹십자약국",
+        "address": "전북특별자치도 전주시 덕진구 안덕원로 159, (인후동2가)",
+        "x": 127.1453282,
+        "y": 35.8335578,
+        "pharmacists": 1
+    },
+    {
+        "ykiho": "JDQ4MTg4MSM1MSMkMSMkNCMkMDMkNTgxMzUxIzIxIyQxIyQ1IyQwMyQzNjEyMjIjNzEjJDEjJDgjJDgz",
+        "name": "모래내백화점약국",
+        "address": "서울특별시 서대문구 수색로 38, 1층 (남가좌동)",
+        "x": 126.9144936,
+        "y": 37.5698106,
+        "pharmacists": 2
+    },
+    {
+        "ykiho": "JDU4MTI3MSM1MSMkMSMkMCMkMDMkNDgxMTkxIzQxIyQxIyQ3IyQ4MiQ0NjE0ODEjODEjJDEjJDIjJDgz",
+        "name": "모래내시장역미래약국",
+        "address": "인천광역시 남동구 구월로 268, 대성빌딩 104호 (구월동)",
+        "x": 126.7203139,
+        "y": 37.4556168,
+        "pharmacists": 1
+    }
+]
