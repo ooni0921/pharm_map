@@ -4,29 +4,70 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>전국 약국 분석 지도</title>
+    
     <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=2223a20b252e059e82135b69bb10f001"></script>
+    
     <style>
-        /* 로딩 화면 스타일 */
+        :root { 
+            --main-color: #2c3e50; 
+            --point-color: #e74c3c; 
+            --naver-color: #03C75A;
+            --warning-color: #f39c12;
+        }
+        
+        body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; font-family: -apple-system, sans-serif; }
+        #map { width: 100%; height: 100%; background: #f4f4f4; }
+
+        /* 로딩 화면 레이어 */
         #loading-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.95);
             z-index: 9999; display: flex; flex-direction: column;
             align-items: center; justify-content: center;
         }
         .spinner {
-            width: 50px; height: 50px; border: 5px solid #ddd;
-            border-top: 5px solid #e74c3c; border-radius: 50%;
+            width: 50px; height: 50px; border: 5px solid #f3f3f3;
+            border-top: 5px solid var(--point-color); border-radius: 50%;
             animation: spin 1s linear infinite;
         }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
-        /* 지도 및 필터 스타일 */
-        body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; font-family: sans-serif; }
-        #map { width: 100%; height: 100%; }
+        /* 하단 필터 컨트롤 바 */
         .filter-bar {
             position: absolute; bottom: 0; left: 0; right: 0; z-index: 100;
             background: white; padding: 15px 20px 35px 20px;
-            border-radius: 20px 20px 0 0; box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+            border-radius: 24px 24px 0 0; box-shadow: 0 -5px 20px rgba(0,0,0,0.15);
+        }
+        .filter-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+        .title-area { font-size: 17px; font-weight: bold; color: var(--main-color); }
+        
+        .btn-group { display: flex; gap: 8px; align-items: center; }
+        
+        button { border: none; border-radius: 8px; font-weight: bold; cursor: pointer; transition: opacity 0.2s; }
+        button:active { opacity: 0.7; }
+        
+        .btn-naver { background: var(--naver-color); color: white; padding: 10px 14px; font-size: 13px; }
+        .btn-apply { background: var(--main-color); color: white; padding: 10px 18px; font-size: 14px; }
+        
+        input[type="number"] {
+            width: 45px; padding: 10px; border: 1px solid #ddd; border-radius: 8px;
+            text-align: center; font-size: 16px; font-weight: bold;
+        }
+
+        .status-msg { font-size: 12px; color: #888; text-align: center; line-height: 1.5; }
+        .warning { color: var(--warning-color); font-weight: bold; }
+
+        /* 숫자 표시 커스텀 마커 배지 */
+        .badge-marker {
+            position: relative; background: var(--point-color); color: white;
+            font-weight: bold; font-size: 11px; padding: 4px 9px;
+            border-radius: 20px; border: 2px solid white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.25); cursor: pointer;
+        }
+        .badge-marker::after {
+            content: ''; position: absolute; bottom: -8px; left: 50%;
+            transform: translateX(-50%); border-top: 8px solid var(--point-color);
+            border-left: 6px solid transparent; border-right: 6px solid transparent;
         }
     </style>
 </head>
@@ -34,21 +75,25 @@
 
 <div id="loading-overlay">
     <div class="spinner"></div>
-    <p id="loading-text" style="margin-top:20px; font-weight:bold;">전국 약국 데이터(26,000건) 로딩 중...</p>
-    <p style="font-size:12px; color:#666;">네트워크 속도에 따라 최대 10초가 소요될 수 있습니다.</p>
+    <p style="margin-top:20px; font-weight:bold; color:#333;">전국 약국 데이터 로딩 중...</p>
+    <p style="font-size:12px; color:#888;">데이터가 많아 잠시만 기다려 주세요.</p>
 </div>
 
 <div id="map"></div>
 
 <div class="filter-bar">
-    <div style="display:flex; justify-content:space-between; align-items:center;">
-        <span style="font-weight:bold;">최소 약사 수</span>
-        <div style="display:flex; gap:8px;">
-            <input type="number" id="minCnt" value="2" style="width:50px; text-align:center;">
-            <button onclick="applyFilter()" style="padding:10px 20px; background:#2c3e50; color:white; border:none; border-radius:8px;">적용</button>
+    <div class="filter-row">
+        <div class="title-area">전국 약국 분석 지도</div>
+        <div class="btn-group">
+            <button class="btn-naver" onclick="openNaverRealEstate()">Naver 상가매물</button>
+            <div style="display:flex; align-items:center; gap:5px; margin-left:5px;">
+                <span style="font-size:11px; color:#666;">최소 약사</span>
+                <input type="number" id="minCnt" value="2" min="0">
+                <button class="btn-apply" onclick="applyFilter()">적용</button>
+            </div>
         </div>
     </div>
-    <div id="status" style="font-size:12px; color:#888; text-align:center; margin-top:10px;"></div>
+    <div id="status" class="status-msg">로딩 완료 후 지도를 움직여 보세요.</div>
 </div>
 
 <script>
@@ -58,37 +103,49 @@
     let infoWindow;
 
     window.onload = function() {
-        // 지도 초기화
         const container = document.getElementById('map');
-        map = new kakao.maps.Map(container, {
-            center: new kakao.maps.LatLng(37.5445, 127.0560),
+        const options = {
+            center: new kakao.maps.LatLng(37.5445, 127.0560), // 성수동 연무장길 중심
             level: 4
-        });
-        infoWindow = new kakao.maps.InfoWindow({ removable: true });
+        };
+        map = new kakao.maps.Map(container, options);
+        infoWindow = new kakao.maps.InfoWindow({ removable: true, zIndex: 1000 });
 
-        // 지도가 움직이면 현재 화면 마커만 갱신 (핵심!)
+        // 지도가 멈출 때 화면 내 데이터만 갱신
         kakao.maps.event.addListener(map, 'idle', updateVisibleMarkers);
 
-        // 데이터 로드 시작
+        // 데이터 로드 (기존 필드명 참조 버전)
         fetch('data.json')
             .then(res => {
-                if (!res.ok) throw new Error("파일을 찾을 수 없거나 네트워크 에러");
+                if (!res.ok) throw new Error("데이터 파일을 찾을 수 없습니다.");
                 return res.json();
             })
             .then(data => {
                 allData = data;
-                // 로딩 화면 숨기기
                 document.getElementById('loading-overlay').style.display = 'none';
                 updateVisibleMarkers();
             })
             .catch(err => {
-                document.getElementById('loading-text').innerText = "로딩 실패: " + err.message;
-                document.getElementById('loading-text').style.color = "red";
                 console.error(err);
+                document.getElementById('status').innerHTML = "<span style='color:red;'>로딩 실패! 파일을 확인하세요.</span>";
             });
     };
 
-    function applyFilter() { updateVisibleMarkers(); }
+    function applyFilter() {
+        updateVisibleMarkers();
+    }
+
+    // 네이버 부동산 연동
+    function openNaverRealEstate() {
+        if (!map) return;
+        const center = map.getCenter();
+        const lat = center.getLat();
+        const lng = center.getLng();
+        const zoom = 19 - map.getLevel(); 
+        
+        const naverUrl = `https://new.land.naver.com/commercial?ms=${lat},${lng},${zoom}&a=SG:SMS:GM:SGM:GMSJ&e=RETAIL`;
+        window.open(naverUrl, '_blank');
+    }
 
     function updateVisibleMarkers() {
         if (!allData.length || !map) return;
@@ -101,29 +158,37 @@
         const sw = bounds.getSouthWest();
         const ne = bounds.getNorthEast();
 
-        // 26,000개 중 현재 화면 범위만 필터링
+        // [기존 필드명 적용: pharmacists, y, x]
         let filtered = allData.filter(d => {
             return d.pharmacists >= min &&
                    d.y >= sw.getLat() && d.y <= ne.getLat() &&
                    d.x >= sw.getLng() && d.x <= ne.getLng();
         });
 
-        // 화면에는 최대 300개만 (브라우저 멈춤 방지)
-        if (filtered.length > 300) {
+        const statusEl = document.getElementById('status');
+        const totalFound = filtered.length;
+
+        if (totalFound > 300) {
             filtered = filtered.slice(0, 300);
-            document.getElementById('status').innerText = "300개 초과로 일부만 표시 중 (확대 필요)";
+            statusEl.innerHTML = `<span class="warning">대상(${totalFound}개)이 너무 많아 300개만 표시합니다. 지도를 확대하세요.</span>`;
         } else {
-            document.getElementById('status').innerText = `화면 내 ${filtered.length}개 표시 중`;
+            statusEl.innerText = `현재 구역 ${totalFound}개 약국 표시 중 (전체 ${allData.length}건)`;
         }
 
         filtered.forEach(item => {
             const content = document.createElement('div');
-            content.className = 'badge-marker'; // 기존 CSS 스타일 필요
-            content.style.cssText = "background:#e74c3c; color:white; font-weight:bold; padding:4px 8px; border-radius:15px; border:2px solid white; font-size:11px; cursor:pointer;";
-            content.innerText = item.pharmacists;
+            content.className = 'badge-marker';
+            content.innerText = `${item.pharmacists}`; 
             
             content.onclick = function() {
-                const infoMsg = `<div style="padding:10px; font-size:13px;"><strong>${item.name}</strong><br>약사: ${item.pharmacists}명<br><small>${item.address}</small></div>`;
+                // [기존 필드명 적용: name, address]
+                const infoMsg = `
+                    <div style="padding:15px; font-size:13px; line-height:1.4; min-width:160px;">
+                        <strong style="color:var(--main-color); font-size:14px;">${item.name}</strong><br>
+                        약사 인원: <span style="color:var(--point-color); font-weight:bold;">${item.pharmacists}명</span><br>
+                        <hr style="border:0; border-top:1px solid #eee; margin:8px 0;">
+                        <small style="color:#666;">${item.address}</small>
+                    </div>`;
                 infoWindow.setContent(infoMsg);
                 infoWindow.setPosition(new kakao.maps.LatLng(item.y, item.x));
                 infoWindow.open(map);
@@ -134,6 +199,7 @@
                 content: content,
                 yAnchor: 1.4
             });
+
             overlay.setMap(map);
             overlays.push(overlay);
         });
