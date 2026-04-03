@@ -57,7 +57,7 @@
         .status-msg { font-size: 12px; color: #888; text-align: center; line-height: 1.5; }
         .warning { color: var(--warning-color); font-weight: bold; }
 
-        /* 숫자 표시 커스텀 마커 배지 */
+        /* 숫자 배지 마커 스타일 */
         .badge-marker {
             position: relative; background: var(--point-color); color: white;
             font-weight: bold; font-size: 11px; padding: 4px 9px;
@@ -76,7 +76,7 @@
 <div id="loading-overlay">
     <div class="spinner"></div>
     <p style="margin-top:20px; font-weight:bold; color:#333;">전국 약국 데이터 로딩 중...</p>
-    <p style="font-size:12px; color:#888;">잠시만 기다려 주세요.</p>
+    <p style="font-size:12px; color:#888;">모바일 최적화 분석 시스템을 시작합니다.</p>
 </div>
 
 <div id="map"></div>
@@ -93,7 +93,7 @@
             </div>
         </div>
     </div>
-    <div id="status" class="status-msg">데이터 로딩 후 분석을 시작하세요.</div>
+    <div id="status" class="status-msg">지도를 움직여 분석을 시작하세요.</div>
 </div>
 
 <script>
@@ -111,10 +111,8 @@
         map = new kakao.maps.Map(container, options);
         infoWindow = new kakao.maps.InfoWindow({ removable: true, zIndex: 1000 });
 
-        // 지도가 멈출 때 화면 내 데이터만 갱신
         kakao.maps.event.addListener(map, 'idle', updateVisibleMarkers);
 
-        // 데이터 로드
         fetch('data.json')
             .then(res => {
                 if (!res.ok) throw new Error("데이터 파일을 찾을 수 없습니다.");
@@ -127,7 +125,7 @@
             })
             .catch(err => {
                 console.error(err);
-                document.getElementById('status').innerHTML = "<span style='color:red;'>로딩 실패! 파일을 확인하세요.</span>";
+                document.getElementById('status').innerHTML = "<span style='color:red;'>로딩 실패! JSON 파일 형식을 확인하세요.</span>";
             });
     };
 
@@ -135,20 +133,28 @@
         updateVisibleMarkers();
     }
 
-    // [업데이트] 최신 네이버 부동산 URL 형식 적용 함수
+    // 모바일/PC 네이버 부동산 통합 연동 함수
     function openNaverRealEstate() {
         if (!map) return;
         const center = map.getCenter();
         const lat = center.getLat();
         const lng = center.getLng();
         
-        // 카카오 4레벨 -> 네이버 약 16레벨 매칭
-        const zoom = 20 - map.getLevel(); 
+        // 모바일 접속 여부 확인
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
         
-        // 알려주신 최신 URL 구조 반영 (ms=위도,경도,줌)
-        // 상가/업무용 매물(RETAIL) 필터 유지
-        const naverUrl = `https://new.land.naver.com/offices?ms=${lat},${lng},${zoom}&a=SG:SMS:GJCG:APTHGJ:GM:TJ&e=RETAIL`;
-        window.open(naverUrl, '_blank');
+        if (isMobile) {
+            // [모바일] 알려주신 형식 적용: fin.land.naver.com
+            // B2: 상가, D02: 상가/업무용, floor: 1~5층 설정
+            const zoom = 20 - map.getLevel(); 
+            const naverMobileUrl = `https://fin.land.naver.com/map?tradeTypes=B2&realEstateTypes=D02&floor=FLF01-FLF02-FLF03-FLF04-FLF05&center=${lng}-${lat}&zoom=${zoom}`;
+            window.open(naverMobileUrl, '_blank');
+        } else {
+            // [PC] 기존 알려주신 최신 형식 적용
+            const zoom = 20 - map.getLevel(); 
+            const naverPcUrl = `https://new.land.naver.com/offices?ms=${lat},${lng},${zoom}&a=SG:SMS:GJCG:APTHGJ:GM:TJ&e=RETAIL`;
+            window.open(naverPcUrl, '_blank');
+        }
     }
 
     function updateVisibleMarkers() {
@@ -162,9 +168,9 @@
         const sw = bounds.getSouthWest();
         const ne = bounds.getNorthEast();
 
-        // 필드명 유지: pharmacists, y, x
+        // [축약 필드 적용] p:약사수, y:위도, x:경도
         let filtered = allData.filter(d => {
-            return d.pharmacists >= min &&
+            return d.p >= min &&
                    d.y >= sw.getLat() && d.y <= ne.getLat() &&
                    d.x >= sw.getLng() && d.x <= ne.getLng();
         });
@@ -182,16 +188,16 @@
         filtered.forEach(item => {
             const content = document.createElement('div');
             content.className = 'badge-marker';
-            content.innerText = `${item.pharmacists}`; 
+            content.innerText = `${item.p}`; 
             
             content.onclick = function() {
-                // 필드명 유지: name, address
+                // [축약 필드 적용] n:상호명, a:주소
                 const infoMsg = `
                     <div style="padding:15px; font-size:13px; line-height:1.4; min-width:160px;">
-                        <strong style="color:var(--main-color); font-size:14px;">${item.name}</strong><br>
-                        약사 인원: <span style="color:var(--point-color); font-weight:bold;">${item.pharmacists}명</span><br>
+                        <strong style="color:var(--main-color); font-size:14px;">${item.n}</strong><br>
+                        약사 인원: <span style="color:var(--point-color); font-weight:bold;">${item.p}명</span><br>
                         <hr style="border:0; border-top:1px solid #eee; margin:8px 0;">
-                        <small style="color:#666;">${item.address}</small>
+                        <small style="color:#666;">${item.a}</small>
                     </div>`;
                 infoWindow.setContent(infoMsg);
                 infoWindow.setPosition(new kakao.maps.LatLng(item.y, item.x));
