@@ -10,7 +10,8 @@
     <style>
         :root { 
             --main-color: #2c3e50; 
-            --point-color: #e74c3c; 
+            --point-color: #e74c3c; /* 일반 마커 색상 */
+            --stack-color: #8e44ad; /* 그룹 마커 색상 (보라색) */
             --naver-color: #03C75A;
             --warning-color: #f39c12;
         }
@@ -57,26 +58,55 @@
         .status-msg { font-size: 12px; color: #888; text-align: center; line-height: 1.5; }
         .warning { color: var(--warning-color); font-weight: bold; }
 
-        /* 숫자 배지 마커 스타일 */
+        /* [핵심] 일반 숫자 배지 마커 스타일 (빨간색, Pill 모양) */
         .badge-marker {
             position: relative; background: var(--point-color); color: white;
             font-weight: bold; font-size: 11px; padding: 4px 9px;
-            border-radius: 20px; border: 2px solid white;
+            border-radius: 15px; border: 2px solid white;
             box-shadow: 0 2px 8px rgba(0,0,0,0.25); cursor: pointer;
+            z-index: 10;
         }
         .badge-marker::after {
             content: ''; position: absolute; bottom: -8px; left: 50%;
             transform: translateX(-50%); border-top: 8px solid var(--point-color);
             border-left: 6px solid transparent; border-right: 6px solid transparent;
         }
+
+        /* [핵심] 그룹(스택) 마커 스타일 (보라색, 3D 겹침 모양) */
+        .badge-marker.stacked {
+            background: var(--stack-color);
+            border-radius: 50%; /* 원형 */
+            width: 26px; height: 26px; /* 크기 고정 */
+            padding: 0; display: flex; align-items: center; justify-content: center;
+            font-size: 12px;
+        }
+        /* 보라색 핀 꼬리 */
+        .badge-marker.stacked::after { border-top-color: var(--stack-color); }
+        
+        /* 겹침 효과를 위한 가짜 마커 레이어 */
+        .badge-marker.stacked::before {
+            content: ''; position: absolute;
+            top: -4px; left: -4px; /* 살짝 비끼게 배출 */
+            width: 100%; height: 100%;
+            background: var(--stack-color);
+            border-radius: 50%; border: 2px solid white;
+            opacity: 0.5; /* 약간 투명하게 */
+            z-index: -1; /* 실제 마커 뒤로 */
+        }
+
+        /* 정보창 리스트 스타일 */
+        .info-list { padding: 10px; font-size: 13px; line-height: 1.6; min-width: 190px; max-height: 220px; overflow-y: auto; }
+        .info-item { border-bottom: 1px solid #eee; padding: 8px 0; }
+        .info-item:last-child { border-bottom: none; }
+        .info-header { font-weight:bold; color:var(--stack-color); font-size:14px; margin-bottom:10px; border-bottom:2px solid var(--stack-color); padding-bottom:5px;}
     </style>
 </head>
 <body>
 
 <div id="loading-overlay">
     <div class="spinner"></div>
-    <p style="margin-top:20px; font-weight:bold; color:#333;">전국 약국 데이터 로딩 중...</p>
-    <p style="font-size:12px; color:#888;">모바일 최적화 분석 시스템을 시작합니다.</p>
+    <p style="margin-top:20px; font-weight:bold; color:#333;">압축된 전국 데이터 로딩 중...</p>
+    <p style="font-size:12px; color:#888;">네트워크 최적화가 적용되었습니다.</p>
 </div>
 
 <div id="map"></div>
@@ -105,7 +135,7 @@
     window.onload = function() {
         const container = document.getElementById('map');
         const options = {
-            center: new kakao.maps.LatLng(37.5445, 127.0560), // 성수동 연무장길 중심
+            center: new kakao.maps.LatLng(37.5445, 127.0560), // 성수동 기준
             level: 4
         };
         map = new kakao.maps.Map(container, options);
@@ -114,10 +144,7 @@
         kakao.maps.event.addListener(map, 'idle', updateVisibleMarkers);
 
         fetch('data.json')
-            .then(res => {
-                if (!res.ok) throw new Error("데이터 파일을 찾을 수 없습니다.");
-                return res.json();
-            })
+            .then(res => res.json())
             .then(data => {
                 allData = data;
                 document.getElementById('loading-overlay').style.display = 'none';
@@ -125,32 +152,24 @@
             })
             .catch(err => {
                 console.error(err);
-                document.getElementById('status').innerHTML = "<span style='color:red;'>로딩 실패! JSON 파일 형식을 확인하세요.</span>";
+                document.getElementById('status').innerText = "데이터 로딩 실패 (JSON 확인)";
             });
     };
 
-    function applyFilter() {
-        updateVisibleMarkers();
-    }
+    function applyFilter() { updateVisibleMarkers(); }
 
-    // 모바일/PC 네이버 부동산 통합 연동 함수
     function openNaverRealEstate() {
         if (!map) return;
         const center = map.getCenter();
         const lat = center.getLat();
         const lng = center.getLng();
-        
-        // 모바일 접속 여부 확인
         const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
         
         if (isMobile) {
-            // [모바일] 알려주신 형식 적용: fin.land.naver.com
-            // B2: 상가, D02: 상가/업무용, floor: 1~5층 설정
             const zoom = 20 - map.getLevel(); 
             const naverMobileUrl = `https://fin.land.naver.com/map?tradeTypes=B2&realEstateTypes=D02&floor=FLF01-FLF02-FLF03-FLF04-FLF05&center=${lng}-${lat}&zoom=${zoom}`;
             window.open(naverMobileUrl, '_blank');
         } else {
-            // [PC] 기존 알려주신 최신 형식 적용
             const zoom = 20 - map.getLevel(); 
             const naverPcUrl = `https://new.land.naver.com/offices?ms=${lat},${lng},${zoom}&a=SG:SMS:GJCG:APTHGJ:GM:TJ&e=RETAIL`;
             window.open(naverPcUrl, '_blank');
@@ -168,51 +187,82 @@
         const sw = bounds.getSouthWest();
         const ne = bounds.getNorthEast();
 
-        // [축약 필드 적용] p:약사수, y:위도, x:경도
-        let filtered = allData.filter(d => {
+        // [최적화] 축약 필드 p, y, x 사용
+        let visibleRaw = allData.filter(d => {
             return d.p >= min &&
                    d.y >= sw.getLat() && d.y <= ne.getLat() &&
                    d.x >= sw.getLng() && d.x <= ne.getLng();
         });
 
+        // [핵심 1] 좌표별 그룹핑 로직 (Jitter를 안 쓰기 위한 방법)
+        const groups = {};
+        visibleRaw.forEach(item => {
+            const key = `${item.y.toFixed(6)},${item.x.toFixed(6)}`; // 좌표를 키로 사용
+            if (!groups[key]) groups[key] = [];
+            groups[key].push(item);
+        });
+
         const statusEl = document.getElementById('status');
-        const totalFound = filtered.length;
+        const groupKeys = Object.keys(groups);
+        
+        statusEl.innerText = `현재 구역 ${groupKeys.length}개 위치 분석 중`;
 
-        if (totalFound > 300) {
-            filtered = filtered.slice(0, 300);
-            statusEl.innerHTML = `<span class="warning">대상(${totalFound}개)이 너무 많아 300개만 표시합니다. 지도를 확대하세요.</span>`;
-        } else {
-            statusEl.innerText = `현재 구역 ${totalFound}개 약국 표시 중 (전체 ${allData.length}건)`;
-        }
-
-        filtered.forEach(item => {
+        // [핵심 2] 그룹별 마커 생성
+        for (const key of groupKeys) {
+            const items = groups[key];
+            const [lat, lng] = key.split(',').map(Number);
             const content = document.createElement('div');
-            content.className = 'badge-marker';
-            content.innerText = `${item.p}`; 
+            
+            // 겹친 개수에 따라 디자인 분기
+            if (items.length > 1) {
+                // [그룹 마커 디자인]
+                content.className = 'badge-marker stacked';
+                content.innerText = `${items.length}`; // 약국 수 표시 (예: "2")
+                content.title = `총 ${items.length}개 약국 밀집 구역`;
+            } else {
+                // [일반 마커 디자인]
+                content.className = 'badge-marker';
+                content.innerText = `${items[0].p}`; // 약사 수 표시
+            }
             
             content.onclick = function() {
-                // [축약 필드 적용] n:상호명, a:주소
-                const infoMsg = `
-                    <div style="padding:15px; font-size:13px; line-height:1.4; min-width:160px;">
-                        <strong style="color:var(--main-color); font-size:14px;">${item.n}</strong><br>
-                        약사 인원: <span style="color:var(--point-color); font-weight:bold;">${item.p}명</span><br>
-                        <hr style="border:0; border-top:1px solid #eee; margin:8px 0;">
-                        <small style="color:#666;">${item.a}</small>
-                    </div>`;
-                infoWindow.setContent(infoMsg);
-                infoWindow.setPosition(new kakao.maps.LatLng(item.y, item.x));
+                // 정보창에 목록 생성
+                let infoContent = `<div class="info-list">`;
+                
+                if (items.length > 1) {
+                    // 그룹 헤더: 총 약국 수 및 총 약사 수 합계
+                    const totalP = items.reduce((sum, curr) => sum + curr.p, 0);
+                    infoContent += `
+                        <div class="info-header">
+                            밀집 구역 (총 ${items.length}개소)
+                            <div style="font-size:12px; color:#333; font-weight:normal; margin-top:3px;">합계 약사 ${totalP}명</div>
+                        </div>`;
+                }
+
+                // 각 약국 목록
+                items.forEach(pharm => {
+                    infoContent += `
+                        <div class="info-item">
+                            <strong style="font-size:14px; color:var(--main-color);">${pharm.n}</strong> 
+                            <span style="color:var(--point-color); font-weight:bold;">(${pharm.p}명)</span><br>
+                            <small style="color:#666; font-size:11px;">${pharm.a}</small>
+                        </div>`;
+                });
+                infoContent += `</div>`;
+
+                infoWindow.setContent(infoContent);
+                infoWindow.setPosition(new kakao.maps.LatLng(lat, lng));
                 infoWindow.open(map);
             };
 
             const overlay = new kakao.maps.CustomOverlay({
-                position: new kakao.maps.LatLng(item.y, item.x),
+                position: new kakao.maps.LatLng(lat, lng),
                 content: content,
                 yAnchor: 1.4
             });
-
             overlay.setMap(map);
             overlays.push(overlay);
-        });
+        }
     }
 </script>
 </body>
